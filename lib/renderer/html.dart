@@ -10,24 +10,25 @@ class HtmlPointRenderer implements PointRenderer {
   HtmlPointRenderer(this._canvas);
 
   @override
-  void render(Point<int> point) {
+  void render(Point point) {
     throw new UnimplementedError();
   }
 
   @override
-  void renderAll(List<Point<int>> corners) {
+  void renderAll(List<Point> corners) {
     _canvas.append(new GElement()..append(_gCorners(corners)));
   }
 
   PathElement _gCorners(List<Point> corners) {
-    var c = corners,
-        d = c.fold("M${c.last.x} ${c.last.y}",
+    var outline = corners.fold("M${corners.last.x} ${corners.last.y}",
             (prev, next) => prev + " L${next.x} ${next.y}"),
         p = new PathElement()
           ..setAttribute("class", "tileoutline")
-          ..setAttribute("d", d)
+          ..setAttribute("d", outline)
           ..setAttribute("fill", "LightGray")
-          ..setAttribute("stroke", "Gray");
+          ..setAttribute("stroke", "Gray")
+          ..setAttribute("stroke-width ", "1")
+          ..setAttribute("stroke-linecap", "round");
     return p;
   }
 }

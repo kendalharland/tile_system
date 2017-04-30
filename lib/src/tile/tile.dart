@@ -9,9 +9,9 @@ abstract class TileFactory {
   factory TileFactory.square(num tileRadius) = SquareTileFactory;
 
   /// Creates a [TileFactory] for [HexTile].
-  factory TileFactory.hex(num tileRadius, {bool flat: false}) => flat
-      ? new HexTileFactory.flat(tileRadius)
-      : new HexTileFactory.pointy(tileRadius);
+  factory TileFactory.hexagon(num tileRadius, {bool flat: false}) => flat
+      ? new HexagonTileFactory.flat(tileRadius)
+      : new HexagonTileFactory.pointy(tileRadius);
 
   /// Returns the [Tile] at the relative position [offsetX], [offsetY].
   Tile tile(int offsetX, int offsetY);
@@ -24,10 +24,10 @@ abstract class TileFactory {
 /// position of any of the pixels that intersect the tile.
 abstract class Tile {
   /// The pixel center of this [Tile].
-  Point<int> get center;
+  Point<double> get center;
 
   /// The pixel corner points of this [Tile].
-  List<Point> get corners;
+  List<Point<double>> get corners;
 
   /// The relative position of this [Tile].
   Point<int> get offset;

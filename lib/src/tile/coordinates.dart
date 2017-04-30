@@ -1,5 +1,15 @@
 import 'package:meta/meta.dart';
 
+double round(double n) {
+  double factor = 1e-7;
+  int sigFigs = (n / factor).truncate();
+  int onesDigit = sigFigs.remainder(10).abs();
+
+  return onesDigit >= 5
+      ? n.isNegative ? (sigFigs - 1) * factor : (sigFigs + 1) * factor
+      : sigFigs * factor;
+}
+
 class Cube {
   final int x;
   final int y;
