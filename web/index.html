@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hexgrid-demo</title>
+    <style>
+      * {padding: 0; margin: 0;}
+      html, body {height: 100vh; width: 100vw}
+    </style>
+</head>
+
+<body>
+<script type="application/dart" src="index.dart"></script>
+<!-- for this next line to work, your pubspec.yaml file must have a dependency on 'browser' -->
+<script src="packages/browser/dart.js"></script>
+
+<svg id="canvas" height="100%" width="100%"
+     style="display:block;margin:auto;"></svg>
+</body>
+</html>

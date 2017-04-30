@@ -1,0 +1,10 @@
+name: tile_system
+version: 0.0.1
+authors:
+  - Kendal Harland <kjharland@google.com>
+homepage: https://github.com/kharland/tilemap
+dependencies:
+  browser:
+dev_dependencies:
+  dart_style:
+  test:
