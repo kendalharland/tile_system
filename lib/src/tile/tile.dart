@@ -1,7 +1,7 @@
 import 'dart:math';
 
-import 'package:tile_system/src/computer/hex_tile.dart';
-import 'package:tile_system/src/computer/square_tile.dart';
+import 'package:tile_system/src/tile/hex_tile.dart';
+import 'package:tile_system/src/tile/square_tile.dart';
 
 /// A factory that partitions a 2D space into a set of polygons called tiles.
 abstract class TileFactory {

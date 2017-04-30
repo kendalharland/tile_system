@@ -1,6 +1,6 @@
 import "dart:math";
 
-import 'package:tile_system/src/computer/coordinates.dart';
+import 'package:tile_system/src/tile/coordinates.dart';
 import 'package:tile_system/tile_system.dart';
 
 /// A Hexagon [TileFactory].
@@ -22,6 +22,7 @@ class HexTileFactory implements TileFactory {
       _tileRadius, _origin, _orientation, new Point<int>(offsetX, offsetY));
 }
 
+/// A hexagon shaped [Tile].
 class HexTile implements Tile {
   final int _radius;
   final Point<int> _origin;
