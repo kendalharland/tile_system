@@ -2,7 +2,7 @@ name: tile_system
 version: 0.0.1
 authors:
   - Kendal Harland <kjharland@google.com>
-homepage: https://github.com/kharland/tilemap
+homepage: https://github.com/kharland/tile_system
 dependencies:
   browser:
 dev_dependencies:
